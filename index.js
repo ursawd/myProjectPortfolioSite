@@ -16,8 +16,9 @@ function menuHandler(menuItem, text1, text2) {
     item.textContent = text2;
   }
   function click(e) {
-    console.log(e);
-    console.log("Start Clicked");
+    document.getElementById("section-3").scrollIntoView({
+      behavior: "smooth",
+    });
   }
 } //menuHandler end
 menuHandler("#start", "Start at the beginning", "Start");
@@ -28,3 +29,16 @@ menuHandler(
   "Let's talk about what the future may bring",
   "Discusion"
 );
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.querySelector(".logo").style.visibility = "hidden";
+    document.querySelector("h2").style.visibility = "visible";
+  } else {
+    document.querySelector(".logo").style.visibility = "visible";
+    document.querySelector("h2").style.visibility = "hidden";
+  }
+}
