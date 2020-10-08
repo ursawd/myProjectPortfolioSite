@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1 rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ----------------------Header---------------------- */
+header {
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  background-color: #242424;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header * {
+  display: inline;
+}
+header li {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+h1.logo {
+  color: white;
+  padding-left: 5%;
+}
+nav {
+  margin-right: 5%;
+}
+/* -------------------------Main----------------------- */
+.container {
+  background-image: url("/images/pexels-negative-space-34153.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  margin-top: 80px;
+}
