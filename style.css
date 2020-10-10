@@ -17,6 +17,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 header * {
   display: inline;
@@ -35,6 +36,8 @@ h1.logo {
   padding: 8%;
   font-size: 3.5rem;
   transition: 0.3s;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 nav {
   margin-right: 5%;
@@ -47,12 +50,26 @@ nav li:hover {
 /* -------------------------Main----------------------- */
 /* -----------------------Section 1-------------------- */
 
+#s1-left {
+  height: 100vh;
+  width: 50vw;
+}
+#s1-right {
+  height: 100vh;
+  width: 50vw;
+}
+/*todo -  this is where small bio goes                 */
+#s1-right h1 {
+  color: white;
+  margin-top: 35%;
+  margin-left: 40%;
+}
 .container {
   background-image: url("/images/pexels-negative-space-34153.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  margin-top: 80px;
+  display: flex;
 }
 /* -----------------Section 2------------------ */
 #section-2,
@@ -61,14 +78,56 @@ nav li:hover {
   width: 100vw;
   background-color: #fff;
 }
-div.card {
-  height: 400px;
-  width: 400px;
-  background-color: red;
+div.cards {
+  display: flex;
+  justify-content: space-between;
 }
-div.card-top {
-  height: 25%;
-  background-color: gray;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 500px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: 5%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 /* -----------------Section 3------------------ */
 #section-3 {
