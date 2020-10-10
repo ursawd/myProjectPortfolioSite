@@ -28,15 +28,18 @@ header li {
 header h2 {
   visibility: hidden;
   padding-left: 4%;
+  font-size: 2rem;
 }
 h1.logo {
   color: white;
   padding: 8%;
-  font-size: 3rem;
+  font-size: 3.5rem;
   transition: 0.3s;
 }
 nav {
   margin-right: 5%;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 nav li:hover {
   color: lightblue;
@@ -58,10 +61,18 @@ nav li:hover {
   width: 100vw;
   background-color: #fff;
 }
-
+div.card {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+}
+div.card-top {
+  height: 25%;
+  background-color: gray;
+}
 /* -----------------Section 3------------------ */
 #section-3 {
   height: 100vh;
   width: 100vw;
-  background-color: #000;
+  background-color: #242424;
 }
