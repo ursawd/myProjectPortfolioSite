@@ -1,0 +1,15 @@
+.resume {
+  height: 100vh;
+  width: 100vw;
+}
+.resume-container {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  background-color: #e3cdb3;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #111f28;
+  text-align: center;
+}
